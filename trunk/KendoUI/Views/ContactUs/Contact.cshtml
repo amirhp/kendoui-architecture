@@ -1,0 +1,24 @@
+﻿
+@{
+    ViewBag.Title = "ContactUs";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@Scripts.Render("~/AppJs/ContactUs/Contact.js")
+ 
+<h2>ContactUs</h2>
+
+
+<form>
+    <label>Name : </label>
+    <input type="text" id="txtName" class="k-textbox"/>
+    <label>Address : </label>
+    @*<input type="text" id="txtAddress" />*@
+    <textarea id="txtAddress" class="k-textbox"></textarea>
+    <label>Email : </label>
+    <input type="email" id="txtEamil" class="k-textbox" />
+    <button id="btnSubmit" type="button" class="k-button" onclick="ContactUsManager.Save()">Submit</button>
+</form>
+
+@Html.Partial("_PersonalInfo")
+
